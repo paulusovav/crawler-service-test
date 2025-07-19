@@ -1,4 +1,8 @@
-name: Test Crawler Action
+name: Test Web Crawler
+
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
     inputs:
