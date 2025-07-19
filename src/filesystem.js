@@ -45,4 +45,9 @@ export async function writeMarkdown(baseDir, host, slug, content) {
   } catch (err) {
     throw new FsError(`💾 Cannot write file ${host}/${slug}.md: ${err.message}`);
   }
+}
+
+// Pomocná funkce pro sestavení cesty v repozitáři
+export function getMarkdownPath(host, slug) {
+  return `content/${host}/${slug}.md`;
 } 
