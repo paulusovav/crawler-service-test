@@ -1,0 +1,1 @@
+https://aibility.cz/event/ai-edu-stream-otevrene-dvere/2025-07-16T09:04:13+00:00https://aibility.cz/event/ai-morning-show-18-6-2025/2025-07-17T11:38:57+00:00https://aibility.cz/event/ai-edu-stream-expert-time/2025-07-16T09:06:35+00:00https://aibility.cz/event/ai-edu-stream-ai-konzultace/2025-07-16T08:56:28+00:00
