@@ -4,7 +4,7 @@ Kopírovat pro AI
 
                   Digitask se mění na Aibility                   Digitask se mění na Aibility                   Digitask se mění na Aibility                  Digitask se mění na Aibility                    Digitask se mění na Aibility                 Digitask se mění na Aibility                  Digitask se mění na Aibility                   Digitask se mění na Aibility                   Digitask se mění na Aibility                  Digitask se mění na Aibility                    Digitask se mění na Aibility                 Digitask se mění na Aibility
 
-[![Aibility Logo](https://aibility.cz/wp-content/uploads/2024/10/Aibility_logo_vector-300x123.png)](https://aibility.cz/)
+[![Aibility Logo](<Base64-Image-Removed>)](https://aibility.cz/)
 
 Přepnout navigaci
 
@@ -26,37 +26,17 @@ Zajímá vás, jak na to?
 
 Pracujeme s chytrými klienty v ČR i po celém světě
 
-![Klient - Česká spořitelna](https://aibility.cz/wp-content/uploads/2024/10/ceska_sporitelna.png)
+![Klient - Česká spořitelna](<Base64-Image-Removed>)
 
-![Klient - CME](https://aibility.cz/wp-content/uploads/2024/10/cme.png)
+![Klient - CME](<Base64-Image-Removed>)
 
-![Klient - Czechitas](https://aibility.cz/wp-content/uploads/2024/10/czechitas.png)
+![Klient - Czechitas](<Base64-Image-Removed>)
 
-![Klient - Edwards](https://aibility.cz/wp-content/uploads/2024/10/edwards.png)
+![Klient - Edwards](<Base64-Image-Removed>)
 
-![Klient - Letiště Praha](https://aibility.cz/wp-content/uploads/2024/10/letiste_praha.png)
+![Klient - Letiště Praha](<Base64-Image-Removed>)
 
-![Klient - Česká spořitelna](https://aibility.cz/wp-content/uploads/2024/10/ceska_sporitelna.png)
-
-![Klient - CME](https://aibility.cz/wp-content/uploads/2024/10/cme.png)
-
-![Klient - Czechitas](https://aibility.cz/wp-content/uploads/2024/10/czechitas.png)
-
-![Klient - Edwards](https://aibility.cz/wp-content/uploads/2024/10/edwards.png)
-
-![Klient - Letiště Praha](https://aibility.cz/wp-content/uploads/2024/10/letiste_praha.png)
-
-![Klient - Česká spořitelna](https://aibility.cz/wp-content/uploads/2024/10/ceska_sporitelna.png)
-
-![Klient - CME](https://aibility.cz/wp-content/uploads/2024/10/cme.png)
-
-![Klient - Czechitas](https://aibility.cz/wp-content/uploads/2024/10/czechitas.png)
-
-![Klient - Edwards](https://aibility.cz/wp-content/uploads/2024/10/edwards.png)
-
-![Klient - Letiště Praha](https://aibility.cz/wp-content/uploads/2024/10/letiste_praha.png)
-
-![Loga posunete swajpnutím](https://aibility.cz/wp-content/uploads/2024/11/flick-to-left.svg)
+![Loga posunete swajpnutím](<Base64-Image-Removed>)
 
 ### Inspirace   a vzdělávání
 
@@ -64,9 +44,9 @@ Ukážeme vám možnosti moderních nástrojů s AI, naučíme vás s nimi praco
 
 [Více informací](https://aibility.cz/sluzby/#inspiracecontainer)
 
-![Inspirace a vzdělávání - Filip Dřímalka](https://aibility.cz/wp-content/uploads/2024/10/inspirace-vzdelavani.jpg)
+![Inspirace a vzdělávání - Filip Dřímalka](<Base64-Image-Removed>)
 
-![AI Konzultace a doporučení](https://aibility.cz/wp-content/uploads/2024/10/konzultace-doporuceni.jpg)
+![AI Konzultace a doporučení](<Base64-Image-Removed>)
 
 ### Konzultace a doporučení na míru
 
@@ -175,13 +155,7 @@ IČ: 10684395
 
 DIČ: CZ10684395
 
-Tento web používá cookies, aby vám zajistil co nejlepší zážitek na našich webových stránkách. Používáním našich stránek souhlasíte s cookies. [Další informace](https://aibility.cz/gdpr/)
-
-Souhlas
-
-Zamítnout
-
-Cookie Policy
+[Facebook](https://www.facebook.com/aibilityorg "Facebook")[LinkedIn](https://www.linkedin.com/company/digitask-cz-sk/ "LinkedIn")
 
 © 2024 Aibility. Jsme součástí skupiny [Seyfor](https://www.seyfor.com/)
 
