@@ -67,9 +67,6 @@ jobs:
           
           echo "Running: $CMD"
           eval $CMD
-
-      - name: Pull latest changes
-  run: git pull origin main
   
       - name: Commit and push results
         run: |
