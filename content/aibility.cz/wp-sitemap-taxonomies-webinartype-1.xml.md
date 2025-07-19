@@ -1,0 +1,1 @@
+https://aibility.cz/webinartype/zdarma/
