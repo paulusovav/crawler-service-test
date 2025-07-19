@@ -1,0 +1,73 @@
+name: Test Crawler Action
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'URLs to crawl (comma separated)'
+        required: true
+        type: string
+      deep:
+        description: 'Enable deep crawling'
+        required: false
+        type: boolean
+        default: false
+      update:
+        description: 'Enable update mode'
+        required: false
+        type: boolean
+        default: false
+      max_depth:
+        description: 'Maximum crawling depth'
+        required: false
+        type: string
+        default: '3'
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run crawler
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO_URL: ${{ github.repositoryUrl }}
+        run: |
+          # Build command based on inputs
+          CMD="node src/crawl.mjs --urls \"${{ github.event.inputs.urls }}\""
+          
+          if [ "${{ github.event.inputs.deep }}" = "true" ]; then
+            CMD="$CMD --deep"
+          fi
+          
+          if [ "${{ github.event.inputs.update }}" = "true" ]; then
+            CMD="$CMD --update"
+          fi
+          
+          if [ "${{ github.event.inputs.deep }}" = "true" ] && [ -n "${{ github.event.inputs.max_depth }}" ]; then
+            CMD="$CMD --max-depth ${{ github.event.inputs.max_depth }}"
+          fi
+          
+          echo "Running: $CMD"
+          eval $CMD
+          
+      - name: Commit and push results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/
+          git diff --staged --quiet || git commit -m "Update crawled content - $(date)"
+          git push
