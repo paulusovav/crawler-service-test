@@ -1,14 +1,22 @@
 {
+  "name": "crawler-service-test",
+  "version": "1.0.0",
   "type": "module",
-  "engines": { "node": ">=18" },
+  "description": "Web crawler with deep crawling and GitHub/Notion integration",
+  "main": "src/crawl.mjs",
   "scripts": {
-    "crawl": "node src/crawl.mjs"
+    "start": "node src/crawl.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "yargs": "^17.7.2",
+    "@notionhq/client": "^2.2.15",
+    "@octokit/core": "^5.0.2",
     "node-fetch": "^3.3.2",
     "p-throttle": "^5.0.0",
-    "@notionhq/client": "^2.2.2",
+    "yargs": "^17.7.2",
     "dotenv": "^16.3.1"
-  }
-} 
+  },
+  "keywords": ["crawler", "web-scraping", "firecrawl", "notion", "github"],
+  "author": "paulusovav",
+  "license": "MIT"
+}
