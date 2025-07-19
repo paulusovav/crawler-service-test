@@ -158,6 +158,74 @@ GitHub umožňuje snadné sdílení crawlovaného obsahu s týmem, přístupnost
 
 ---
 
+Update režim pro re-crawling webů
+Crawler podporuje inteligentní aktualizaci již stažených webů. Při změnách na webu můžete snadno aktualizovat lokální kopii bez vytváření duplicit.
+Jak funguje Update režim
+Automatická detekce
+Crawler automaticky rozpozná, zda byl web již dříve stažen:
+
+Kontroluje existenci složky na GitHub (content/{domain}/)
+Kontroluje záznam v Notion databázi
+Pokud najde existující obsah, automaticky aktivuje update režim
+
+Explicitní update
+Můžete vynutit update režim pomocí parametru --update:
+bash# Explicitní update existujícího webu
+node src/crawl.mjs --urls "https://example.com" --deep --update
+
+# Automatický update (crawler sám rozpozná existující web)
+node src/crawl.mjs --urls "https://example.com" --deep
+Co se děje při update
+1. Deep crawl update
+Pro weby stažené s --deep parametrem:
+
+Zjistí seznam existujících markdown souborů na GitHub pro danou doménu
+Smaže soubory, které už na webu neexistují (cleanup starého obsahu)
+Stáhne fresh obsah všech aktuálních stránek z webu
+Přepíše všechny soubory na GitHub (bez vytváření duplicit)
+Aktualizuje Notion záznam s novým timestampem a počtem stránek
+
+Výsledek: Složka content/{domain}/ obsahuje pouze aktuální stránky
+2. Single crawl update
+Pro jednotlivé stránky (bez --deep):
+
+Zachová původní chování - přepíše konkrétní soubor
+Aktualizuje odpovídající Notion záznam
+
+Příklady použití
+Monitoring změn na webu
+bash# První crawl - vytvoří kompletní kopii
+node src/crawl.mjs --urls "https://blog.example.com" --deep
+
+# Později - aktualizace na nejnovější verzi
+node src/crawl.mjs --urls "https://blog.example.com" --deep
+Pravidelná synchronizace
+bash# Denní aktualizace firemního webu
+node src/crawl.mjs --urls "https://firma.cz" --deep --update
+Update konkrétní stránky
+bash# Aktualizace pouze homepage
+node src/crawl.mjs --urls "https://example.com" --update
+Výhody update režimu
+
+✅ Žádné duplicity - přepisuje existující soubory
+✅ Cleanup - maže zastaralé stránky automaticky
+✅ Aktuální obsah - vždy nejnovější verze webu
+✅ Zachované struktury - stejné cesty a názvy souborů
+✅ Historie v Notion - aktualizované timestampy
+✅ Efektivní - zpracovává pouze změny
+
+Poznámky
+
+Update režim vyžaduje existující GitHub repo a Notion databázi
+Pro deep crawl doporučujeme nechat automatickou detekci
+Parametr --update je volitelný - crawler rozpozná update sám
+Struktura složek zůstává zachována pro kompatibilitu
+
+
+Update funkcionalita zajišťuje, že vaše crawlovaná data jsou vždy synchronizována s aktuálním stavem webů.
+
+---
+
 ## 🚀 Co je v plánu dál
 
 ### **1. AI-powered čištění obsahu**
