@@ -1,0 +1,9 @@
+{
+  "name": "crawler-service-test",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {},
+  "scripts": {
+    "crawl": "node src/crawl.mjs"
+  }
+}
