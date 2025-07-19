@@ -48,7 +48,7 @@ jobs:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPO_URL: ${{ github.repositoryUrl }}
+          GITHUB_REPO_URL: https://github.com/paulusovav/crawler-service-test
         run: |
           # Build command based on inputs
           CMD="node src/crawl.mjs --urls \"${{ github.event.inputs.urls }}\""
